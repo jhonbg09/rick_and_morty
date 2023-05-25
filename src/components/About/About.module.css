@@ -1,0 +1,41 @@
+.container_about{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
+}
+
+.container{
+    padding: 10px;
+    height: 25rem;
+    width: 22rem;
+    background-color: greenyellow;
+    border-radius: 50px;
+    border: 5px solid black;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title h1{
+    padding: 10px 5px;
+    font-size: 2.5em;
+    font-weight: 900;
+    text-align: center;
+}
+
+.text p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 6px;
+    text-align: center;
+    font-size: large;
+}

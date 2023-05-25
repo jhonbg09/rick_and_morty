@@ -1,0 +1,29 @@
+.container{
+    background: #7DFE5B;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* opacity: 0.4;  */
+    text-decoration: none;
+}
+
+
+.links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #7DFE5B;
+    border-radius: 5px;
+    height: 2rem;
+    width: 4.5rem;
+}
+
+.links:hover{
+    cursor: pointer;
+    background: #07482a;
+    color: white;
+    transition: 3s;
+
+    
+}
+

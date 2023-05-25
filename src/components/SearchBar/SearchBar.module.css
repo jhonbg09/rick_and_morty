@@ -1,0 +1,33 @@
+.searchbar{
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.input_searchbar{
+    height: 2rem;
+    width: 15rem;
+    border: none;
+    border-radius: 20px 0px 0px 20px;
+    border: 1px solid #97ce4c;
+}
+
+.btn_search{
+    height: 2rem;
+    width: 5rem;
+    border: 1px solid #97ce4c;
+    border-radius: 0px 20px 20px 0px;
+    background: #e4a788;
+    font-weight: bold;
+    transition: 0.5s ease-in-out;
+}
+
+.btn_search:hover{
+    cursor: pointer;
+    font-weight: bold;
+    background: #97ce4c;
+    color: #44281d;
+}
+
