@@ -1,14 +1,30 @@
 import { Link } from "react-router-dom";
 import styles from "./Card.module.css";
+import { connect } from "react-redux";
+import { useState } from "react";
+import { addFav, removeFav } from "../../redux/action";
 
-export default function Card(props) {
-  const { id, name, status, species, gender, origin, image, onClose } = props;
+function Card(props) {
+  const { id, name, image, onClose, addFav,removeFav } = props;
 
+  const [isFav, setIsFav] = useState(false);
+
+  const handleFavorite = () =>{
+    isFav ? removeFav(id) : addFav(props);
+    setIsFav(!isFav)
+  }
   return (
     <div className={styles.card}>
-      <div>
-        <button
-          className={styles.btn_x} onClick={() => {onClose(id);}}>X</button>
+       
+      <div className={styles.botton}>
+      {isFav ? (
+        <button className={styles
+        .buttonFav} onClick={handleFavorite}>❤️</button>
+      ) : (
+        <button onClick={handleFavorite}>🤍</button>
+      )}
+
+        <button className={styles.btn_x} onClick={() => {onClose(id);}}>X</button>
       </div>
       <Link to={`/detail/${id}`}>
       <div>
@@ -17,10 +33,6 @@ export default function Card(props) {
         </div>
         <div>
           <h2>{name} </h2>
-          {/* <h2>status: {status}</h2>
-          <h2>species: {species}</h2> 
-          <h2>gender: {gender}</h2> 
-          <h2>origin: {origin}</h2> */}
         </div>
       </div>
 
@@ -28,3 +40,15 @@ export default function Card(props) {
    </div>
   );
 }
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addFav: (character) => {
+      dispatch(addFav(character))
+    },
+    removeFav: (id) => {
+      dispatch(removeFav(id))
+    }
+  }
+}
+export default connect(null, mapDispatchToProps)(Card);

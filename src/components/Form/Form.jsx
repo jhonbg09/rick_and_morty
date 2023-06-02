@@ -53,6 +53,13 @@ const Form = (props) => {
             name="password"
             onChange={handleChange}
           />
+          {errors.p1 ? (
+            <p>{errors.p1}</p>
+          ) : errors.p2 ? (
+            <p>{errors.p2}</p>
+          ) : (
+            <p>{errors.p3}</p>
+          )}
         </div>
 
         <button type="submit">Submit</button>

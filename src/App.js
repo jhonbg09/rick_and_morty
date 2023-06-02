@@ -22,8 +22,8 @@ function App() {
   
   const navigate = useNavigate();
   const [access, setAccess] = useState(false);
-  const EMAIL = 'ejemplo@gmail.com';
-  const PASSWORD = 'unaPassword';
+  const EMAIL = '';
+  const PASSWORD = '';
 
   function login(userData) {
     if (userData.password === PASSWORD && userData.email === EMAIL) {

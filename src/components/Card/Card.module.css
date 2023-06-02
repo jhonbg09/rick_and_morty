@@ -7,9 +7,28 @@
   margin: 0.5rem;
   border-radius: 10px;
   width: 18rem;
-  height: 60%;
+  height: 25rem;
+  border: 5px solid black;
   
 }
+
+.botton{
+  display: flex;
+  height: 50px;
+  width: 10vw;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.buttonFav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 5px solid black;
+}
+
 
 .btn_x {
   position: relative;
